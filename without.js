@@ -15,13 +15,13 @@ const assertArraysEqual = function(array1, array2) {
   return eqArrays(array1,array2) ? console.log(`✅ Assertion Passed: Array 1 === Array 2`) : console.log(`❌ Assertion Failed: Array 1 !== Array 2`);
 };
 
-const without = function (sourceArray, removeArray) {
+const without = function(sourceArray, removeArray) {
   let intermediateArray = sourceArray;
-  let outputArray = intermediateArray.filter(function callBackFn(element) { 
+  let outputArray = intermediateArray.filter(function callBackFn(element) {
     return removeArray.indexOf(element) < 0; //Any element that meets the true condition remains in the filtered array.
-  })
-  return outputArray;  
-}
+  });
+  return outputArray;
+};
 
 // console.log(without([1, 2, 3], [1])) // => [2, 3]
 // console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
