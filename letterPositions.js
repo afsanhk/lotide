@@ -12,23 +12,23 @@ const eqArrays = function(array1, array2) {
 };
 
 const assertArraysEqual = function(array1, array2) {
-  return eqArrays(array1,array2) ? console.log(`✅ Assertion Passed: Array 1 === Array 2`) : console.log(`❌ Assertion Failed: Array 1 !== Array 2`);
+  return eqArrays(array1,array2) ? console.log(`✅ Assertion Passed: [${array1}] === [${array2}]`) : console.log(`❌ Assertion Failed: [${array1}] !== [${array2}]`);
 };
 
 const letterPositions = function(sentence) {
   const results = {};
-    for (let i = 0; i < sentence.length; i++) {
+  for (let i = 0; i < sentence.length; i++) {
 
-      if (sentence[i] !== ' ') {
-        if (results[sentence[i]]) {
-          results[sentence[i]].push(i);
-        } else {
-          results[sentence[i]] = [i];
-        }
+    if (sentence[i] !== ' ') {
+      if (results[sentence[i]]) {
+        results[sentence[i]].push(i);
+      } else {
+        results[sentence[i]] = [i];
       }
     }
+  }
   return results;
-}
+};
 
 const output = letterPositions('hello');
 console.log(output);

@@ -13,7 +13,7 @@ const eqArrays = function(array1, array2) {
 
 
 const assertArraysEqual = function(array1, array2) {
-  return eqArrays(array1,array2) ? console.log(`✅ Assertion Passed: Array 1 === Array 2`) : console.log(`❌ Assertion Failed: Array 1 !== Array 2`);
+  return eqArrays(array1,array2) ? console.log(`✅ Assertion Passed: [${array1}] === [${array2}]`) : console.log(`❌ Assertion Failed: [${array1}] !== [${array2}]`);
 };
 
 const flatten = function(inputArray) {
