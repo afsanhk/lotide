@@ -1,21 +1,5 @@
-const inspect = require('util').inspect;
-
-const assertEqual = function(actual, expected) {
-  return actual === expected ? console.log(`✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-};
-
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  } else if (array1.length === array2.length) {
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] !== array2[i]) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
+// const inspect = require('util').inspect;
+const eqArrays = require('./eqArrays');
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
@@ -47,7 +31,9 @@ const eqObjects = function(object1, object2) {
 
 };
 
+module.exports = eqObjects;
 
+// const assertEqual = require('./assertEqual');
 // //  PRIMITIVE TESTS
 // const ab = { a: "1", b: "2" };
 // const ba = { b: "2", a: "1" };
@@ -66,38 +52,38 @@ const eqObjects = function(object1, object2) {
 // assertEqual(eqObjects(cd, cd2),false); // => false
 
 
-// STRETCH -- NESTED OBJECT TESTS
-console.log(assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }),true)); // => true
-console.log(assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }),false)); // => false
-console.log(assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }),false)); // => false
+// // STRETCH -- NESTED OBJECT TESTS
+// console.log(assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }),true)); // => true
+// console.log(assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }),false)); // => false
+// console.log(assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }),false)); // => false
 
 
 
-// STRETCH -- MORE TESTS:
+// // STRETCH -- MORE TESTS:
 
-const x = {
-  'number': 2,
-  'name': 'Tragedy',
-  'array': [1,3,5,7],
-  'obj': {a:{b:{c:{d:{e:{f:{condition: 'poor'}}}}}}}
-};
+// const x = {
+//   'number': 2,
+//   'name': 'Tragedy',
+//   'array': [1,3,5,7],
+//   'obj': {a:{b:{c:{d:{e:{f:{condition: 'poor'}}}}}}}
+// };
 
-const y = {
-  'obj': {a:{b:{c:{d:{e:{f:{condition: 'poor'}}}}}}} ,
-  'number': 2,
-  'name': 'Tragedy',
-  'array': [1,3,5,7]
-};
+// const y = {
+//   'obj': {a:{b:{c:{d:{e:{f:{condition: 'poor'}}}}}}} ,
+//   'number': 2,
+//   'name': 'Tragedy',
+//   'array': [1,3,5,7]
+// };
 
-const z = {
-  'obj': {f:{e:{d:{c:{b:{a:{condition: 'poor'}}}}}}} ,
-  'number': 2,
-  'name': 'Tragedy',
-  'array': [1,3,5,7]
-};
+// const z = {
+//   'obj': {f:{e:{d:{c:{b:{a:{condition: 'poor'}}}}}}} ,
+//   'number': 2,
+//   'name': 'Tragedy',
+//   'array': [1,3,5,7]
+// };
 
-console.log(assertEqual(eqObjects({ a: { x:0, y: 35, z: 1 }, b: 2 }, { a: { z: 1, x:0,y:35 }, b: 2 }),true)); // => true
-console.log(assertEqual(eqObjects({ a: { x:0, y: 'chicken nuggets', z: 1 }, b: 2 }, { a: { z: 1, x:0,y:35 }, b: 2 }),false)); // => false
+// console.log(assertEqual(eqObjects({ a: { x:0, y: 35, z: 1 }, b: 2 }, { a: { z: 1, x:0,y:35 }, b: 2 }),true)); // => true
+// console.log(assertEqual(eqObjects({ a: { x:0, y: 'chicken nuggets', z: 1 }, b: 2 }, { a: { z: 1, x:0,y:35 }, b: 2 }),false)); // => false
 
-console.log(assertEqual(eqObjects(x,y),true)); // => true
-console.log(assertEqual(eqObjects(x,z),false)); // => false
+// console.log(assertEqual(eqObjects(x,y),true)); // => true
+// console.log(assertEqual(eqObjects(x,z),false)); // => false

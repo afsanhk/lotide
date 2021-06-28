@@ -18,4 +18,4 @@ describe(`#middle()`, () => {
     assert.deepEqual(middle([0]),[]);
   });
 
-})
+});
