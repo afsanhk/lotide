@@ -9,9 +9,9 @@ const eqArrays = function(array1, array2) {
         if (eqArrays(array1[i],array2[i]) === false) {
           return false;
         }
-      }
+      
       // BASE CASE -- NO NESTED ARRAY
-      else if (array1[i] !== array2[i]) {
+      } else if (array1[i] !== array2[i]) {
         return false;
       }
     }
