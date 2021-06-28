@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@afsanhk/lotide",
   "version": "1.0.0",
-  "description": "A clone of lodash made for the LHL Web Dev bootcamp W1 -- June 21, 2021",
+  "description": "A clone of lodash made for the LHL Web Dev bootcamp W1 (June 2021 Cohort)",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/afsanhk/lotide.git"
   },
-  "author": "",
+  "author": "Afsanul Khan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/afsanhk/lotide/issues"
