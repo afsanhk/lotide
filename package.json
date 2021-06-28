@@ -1,6 +1,6 @@
 {
   "name": "@afsanhk/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A clone of lodash made for the LHL Web Dev bootcamp W1 (June 2021 Cohort)",
   "main": "assertArraysEqual.js",
   "directories": {
