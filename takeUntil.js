@@ -27,7 +27,7 @@ const takeUntil = function(array, callback) {
   }
 
   return output;
-}
+};
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
@@ -43,10 +43,10 @@ console.log(results2);
 
 assertArraysEqual(results2,["I've", "been", "to", "Hollywood"]);
 
-console.log('---')
+console.log('---');
 
 const data3 = [true, true, true, 'chicken', 34, 45, 'normandy', false, 'cow', 'jaijaijai'];
 const results3 = takeUntil(data3, x => x === false);
-console.log(results3)
+console.log(results3);
 
 assertArraysEqual(results3,[true, true, true, 'chicken', 34, 45, 'normandy']);
